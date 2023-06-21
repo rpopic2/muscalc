@@ -42,8 +42,6 @@ public:
 
     message<> push { this, "push",
         MIN_FUNCTION {
-            if (_buf == 0.0l)
-                return {};
             auto &u = _vec_osc.emplace_back();
             u.osc.frequency(_buf, samplerate());
             u.amp = 1.0l;
@@ -79,8 +77,7 @@ public:
 
     message<> chain { this, "chain",
         MIN_FUNCTION {
-            _chain_next = !_chain_next;
-            output_next_chain.send(_chain_next);
+            _chain_next = args[0];
             return {};
         }
     };
@@ -107,9 +104,17 @@ public:
         }
     };
 
+    message<> freq { this, "freq",
+        MIN_FUNCTION {
+            _vec_osc.back().osc.frequency(_buf, samplerate());
+            return {};
+        }
+    };
+
     void on_cur_osc_change() {
-        output_waveform.send(_vec_osc.back().waveform_idx);
-        output_next_chain.send(_chain_next);
+        auto &b = _vec_osc.back();
+        output_waveform.send(b.waveform_idx);
+        output_next_chain.send(b.is_chained);
     }
 
 
