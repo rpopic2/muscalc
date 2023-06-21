@@ -48,7 +48,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 686.230778634548187, 204.411764621734619, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 467.0, 490.411764621734619, 204.0, 21.0 ],
+					"presentation_rect" : [ 482.5, 488.411764621734619, 204.0, 21.0 ],
 					"text" : "440 + -> 440hz의 oscillator를 추가."
 				}
 
@@ -79,7 +79,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 748.730778634548187, 169.0, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 467.0, 382.411764621734619, 173.0, 21.0 ],
+					"presentation_rect" : [ 482.5, 382.411764621734619, 173.0, 21.0 ],
 					"text" : "0.2 * -> amplitude를 0.2로 설정."
 				}
 
@@ -124,8 +124,8 @@
 					"patching_rect" : [ 77.461531400680542, 491.988691389560699, 150.0, 48.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 287.0, 382.411764621734619, 173.0, 34.0 ],
-					"text" : "가장 마지막에 추가한 oscillator의 amplitude 값을 변경함."
+					"presentation_rect" : [ 287.0, 382.411764621734619, 185.0, 34.0 ],
+					"text" : "* 가장 마지막에 추가한 oscillator의 amplitude 값을 변경함."
 				}
 
 			}
@@ -140,8 +140,8 @@
 					"patching_rect" : [ 76.461531400680542, 546.988691389560699, 150.0, 48.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 287.0, 435.411764621734619, 171.0, 34.0 ],
-					"text" : "+ deque에 pop_front. 가장 먼저 추가한 oscillator을 제거함."
+					"presentation_rect" : [ 287.0, 431.411764621734619, 185.0, 34.0 ],
+					"text" : "- 가장 먼저 추가한 oscillator을 제거함. (deque에 pop_front. )"
 				}
 
 			}
@@ -194,15 +194,15 @@
 				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-33",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.461531400680542, 602.988691389560699, 150.0, 34.0 ],
+					"patching_rect" : [ 75.461531400680542, 602.988691389560699, 150.0, 48.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 287.0, 490.411764621734619, 169.0, 34.0 ],
-					"text" : "+ deque에 push. 새로운 oscillator를 추가함."
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 287.0, 481.411764621734619, 185.0, 48.0 ],
+					"text" : "+ 현재 입력된 주파수를 가지는 새로운 oscillator를 추가함. (deque에 push.)"
 				}
 
 			}

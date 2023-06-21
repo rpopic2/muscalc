@@ -38,6 +38,8 @@ public:
 
     message<> push { this, "push",
         MIN_FUNCTION {
+            if (_buf == 0.0l)
+                return {};
             auto &u = _vec_osc.emplace_back();
             u.first.frequency(_buf, samplerate());
             u.second = 1.0l;
