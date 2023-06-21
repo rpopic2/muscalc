@@ -6,8 +6,8 @@
 
 <c74object name='muscalc.play~' category='msp'>
 
-	<digest>plays the given pitch </digest>
-	<description>plays the given pitch </description>
+	<digest>oscillator for muscalc </digest>
+	<description>oscillator for muscalc </description>
 
 
 	<!--METADATA-->
@@ -29,6 +29,21 @@
 
 	<methodlist>
 
+		<method name='amp'>
+			<digest></digest>
+			<description></description>
+		</method>
+
+		<method name='pop'>
+			<digest></digest>
+			<description></description>
+		</method>
+
+		<method name='push'>
+			<digest></digest>
+			<description></description>
+		</method>
+
 		<method name='float'>
 			<digest></digest>
 			<description></description>
@@ -47,7 +62,7 @@
 	<!--RELATED-->
 
 	<seealsolist>
-		<seealso name='accum' />
+		<seealso name='cycle~' />
 	</seealsolist>
 
 

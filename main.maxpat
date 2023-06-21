@@ -12,7 +12,7 @@
 		"classnamespace" : "box",
 		"rect" : [ 34.0, 362.0, 913.0, 959.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -39,6 +39,205 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-60",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 686.230778634548187, 204.411764621734619, 150.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 467.0, 490.411764621734619, 204.0, 21.0 ],
+					"text" : "440 + -> 440hz의 oscillator를 추가."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-59",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 716.461542248725891, 188.0, 153.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 601.0, 233.0, 153.0, 34.0 ],
+					"text" : "맥스의 c++ min api를 이용하여 제작하였습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-58",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 748.730778634548187, 169.0, 150.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 467.0, 382.411764621734619, 173.0, 21.0 ],
+					"text" : "0.2 * -> amplitude를 0.2로 설정."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-57",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 58.92307323217392, 449.0, 150.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 169.5, 354.235293388366699, 150.0, 21.0 ],
+					"text" : "현재 입력중인 값 지우기"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-56",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 709.653858959674835, 188.0, 150.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 293.5, 317.82352876663208, 173.0, 21.0 ],
+					"text" : "현재 입력 중인 값을 볼 수 있음"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-53",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 77.461531400680542, 491.988691389560699, 150.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 287.0, 382.411764621734619, 173.0, 34.0 ],
+					"text" : "가장 마지막에 추가한 oscillator의 amplitude 값을 변경함."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-52",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 76.461531400680542, 546.988691389560699, 150.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 287.0, 435.411764621734619, 171.0, 34.0 ],
+					"text" : "+ deque에 pop_front. 가장 먼저 추가한 oscillator을 제거함."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 683.615391612052917, 142.807690799236298, 150.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 601.0, 141.5, 150.0, 21.0 ],
+					"text" : "잠금 해제하여 설명 보기",
+					"textjustification" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-49",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 728.653858959674835, 129.0, 153.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 323.0, 257.0, 238.0, 21.0 ],
+					"text" : "deque의 크기 (현재 재생중인 oscillator의 개수)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-41",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 747.230778634548187, 161.0, 153.0, 61.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 601.0, 167.0, 153.0, 61.0 ],
+					"text" : "신디사이져를 계산기 모양으로 만들면 재밌고 새롭지 않을까 하는 아이디어로 제작하였습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-33",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 75.461531400680542, 602.988691389560699, 150.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 287.0, 490.411764621734619, 169.0, 34.0 ],
+					"text" : "+ deque에 push. 새로운 oscillator를 추가함."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-32",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 80.69230043888092, 695.653848111629486, 150.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 253.0, 536.411764621734619, 150.0, 21.0 ],
+					"text" : ". 소수점 입력"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 20.0,
+					"id" : "obj-4",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 77.461531400680542, 596.57692676782608, 243.0, 75.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 451.0, 86.5, 300.0, 53.0 ],
+					"text" : "20191507 김현중\n전자음악프로그래밍1 기말과제",
+					"textjustification" : 2
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "JetBrains Mono",
 					"id" : "obj-46",
@@ -188,7 +387,8 @@
 					"patching_rect" : [ 158.20588231086731, 25.382354021072388, 598.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 131.5, 78.0, 598.0, 70.0 ],
-					"text" : "muscalc"
+					"text" : "muscalc",
+					"textcolor" : [ 0.890196078431372, 0.890196078431372, 0.890196078431372, 1.0 ]
 				}
 
 			}
@@ -534,6 +734,22 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"autofit" : 1,
+					"forceaspect" : 1,
+					"id" : "obj-65",
+					"maxclass" : "fpic",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 742.115396201610565, 128.999997913837433, 100.0, 29.767441860465116 ],
+					"pic" : "Macintosh HD:/Users/rpopic2/Desktop/Screenshot 2023-06-22 at 01.54.29.png",
+					"presentation" : 1,
+					"presentation_rect" : [ 131.5, 71.616279069767444, 214.156521739130426, 63.748918099089984 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -766,6 +982,13 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "Screenshot 2023-06-22 at 01.54.29.png",
+				"bootpath" : "~/Desktop",
+				"patcherrelativepath" : "../../../../Desktop",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "muscalc.accum.mxo",
 				"type" : "iLaX"
 			}

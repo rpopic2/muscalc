@@ -48,7 +48,7 @@ public:
 
     message<> pop { this, "pop",
         MIN_FUNCTION {
-            if (_vec_osc.size() <= 0)
+            if (_vec_osc.empty())
                 return {};
             _vec_osc.pop_front();
             output_right.send(_vec_osc.size());
@@ -58,6 +58,8 @@ public:
 
     message<> amp { this, "amp",
         MIN_FUNCTION {
+            if (_vec_osc.empty())
+                return {};
             auto _amp = _buf <= 1l ? _buf : 1l;
             _vec_osc.back().second = _amp;
             return {};
