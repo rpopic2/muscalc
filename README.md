@@ -1,6 +1,6 @@
 # muscalc
 Musical calculator package for Max.
-I made this for final assignment.
+I made this for the final assignment.
 
 This package was created using the Min-DevKit for Max, an API and supporting tools for writing externals in modern C++.
 
