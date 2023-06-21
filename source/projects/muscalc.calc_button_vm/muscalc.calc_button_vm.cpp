@@ -52,7 +52,7 @@ public:
         }
     };
 
-    void send() {
+    void send() noexcept {
         number n = button_number;
         output.send(n);
     }
