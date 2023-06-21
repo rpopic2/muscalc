@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 362.0, 913.0, 959.0 ],
+		"rect" : [ 34.0, 362.0, 756.0, 959.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,15 +40,80 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-62",
+					"linecount" : 7,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 436.0, 495.0, 175.0, 101.0 ],
+					"text" : "muscalc.play~ 는 계산기의 oscillator입니다. 들어온 number를 일단 기억하다가, 다음 세 개의 명령에 따라 작업을 수행합니다. (오른쪽에서 설명)\n오른쪽 outlet에는 현재 oscillator의 개수를 내보냅니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"linecount" : 15,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 123.0, 391.0, 152.0, 209.0 ],
+					"presentation_linecount" : 15,
+					"text" : "muscalc.accum은 위의 버튼들로 입력된 숫자를 실제 계산기처럼 누적하도록 한 오브젝트입니다. 기본적으로 number를 입력하면 계산기처럼 원래 숫자 * 10을 한 후 새 숫자를 더하는 방식입니다.\nreset 메세지는 숫자를 모두 지우고, dot 메세지는 앞으로 들어오는 숫자에 0.1을 곱하고, 그 다음은 0.01을, ... 이러한 패턴으로 곱하게 하여 소수점 입력을 구현하였습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 332.0, 103.588235378265381, 150.0, 48.0 ],
+					"text" : "대부분은 제가 c++로 직접 만든 오브젝트들로 구성되어 있습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 332.0, 150.0, 150.0, 88.0 ],
+					"text" : "muscalc.calc_button_vm\n은 계산기 숫자 버튼으로, attribute를 inspector 창에서 바꾸기만 하면 나오는 숫자와 표시되는 숫자가 같이 바뀌도록 하였습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-29",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 720.538476526737213, 76.588235378265381, 150.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 601.0, 274.0, 150.0, 48.0 ],
+					"text" : "presentation mode를 종료하면 패치에 대한 설명이 있습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-60",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 686.230778634548187, 204.411764621734619, 150.0, 34.0 ],
+					"patching_rect" : [ 697.115396201610565, 120.0, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 482.5, 488.411764621734619, 204.0, 21.0 ],
+					"presentation_rect" : [ 474.0, 488.411764621734619, 204.0, 21.0 ],
 					"text" : "440 + -> 440hz의 oscillator를 추가."
 				}
 
@@ -61,7 +126,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 716.461542248725891, 188.0, 153.0, 34.0 ],
+					"patching_rect" : [ 727.346159815788269, 103.588235378265381, 153.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 601.0, 233.0, 153.0, 34.0 ],
@@ -77,70 +142,74 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 748.730778634548187, 169.0, 150.0, 34.0 ],
+					"patching_rect" : [ 759.615396201610565, 84.588235378265381, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 482.5, 382.411764621734619, 173.0, 21.0 ],
+					"presentation_rect" : [ 474.0, 386.411764621734619, 173.0, 21.0 ],
 					"text" : "0.2 * -> amplitude를 0.2로 설정."
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-57",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.92307323217392, 449.0, 150.0, 21.0 ],
+					"patching_rect" : [ 687.92307323217392, -4.769235968589783, 150.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 169.5, 354.235293388366699, 150.0, 21.0 ],
+					"presentation_rect" : [ 169.5, 354.235293388366699, 150.0, 25.0 ],
 					"text" : "현재 입력중인 값 지우기"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-56",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 709.653858959674835, 188.0, 150.0, 34.0 ],
+					"patching_rect" : [ 720.538476526737213, 103.588235378265381, 150.0, 38.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 293.5, 317.82352876663208, 173.0, 21.0 ],
+					"presentation_rect" : [ 293.5, 317.82352876663208, 173.0, 25.0 ],
 					"text" : "현재 입력 중인 값을 볼 수 있음"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-53",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 77.461531400680542, 491.988691389560699, 150.0, 48.0 ],
+					"patching_rect" : [ 706.461531400680542, 38.219455420970917, 150.0, 52.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 287.0, 382.411764621734619, 185.0, 34.0 ],
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 287.0, 382.411764621734619, 185.0, 52.0 ],
 					"text" : "* 가장 마지막에 추가한 oscillator의 amplitude 값을 변경함."
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-52",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 76.461531400680542, 546.988691389560699, 150.0, 48.0 ],
+					"patching_rect" : [ 705.461531400680542, 93.219455420970917, 150.0, 52.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 287.0, 431.411764621734619, 185.0, 34.0 ],
+					"presentation_rect" : [ 287.0, 431.411764621734619, 185.0, 38.0 ],
 					"text" : "- 가장 먼저 추가한 oscillator을 제거함. (deque에 pop_front. )"
 				}
 
@@ -151,7 +220,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 683.615391612052917, 142.807690799236298, 150.0, 21.0 ],
+					"patching_rect" : [ 688.615391612052917, 123.423078656196594, 150.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 601.0, 141.5, 150.0, 21.0 ],
 					"text" : "잠금 해제하여 설명 보기",
@@ -161,15 +230,17 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-49",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 728.653858959674835, 129.0, 153.0, 34.0 ],
+					"patching_rect" : [ 733.653858959674835, 109.615387856960297, 153.0, 52.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 323.0, 257.0, 238.0, 21.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 323.0, 257.0, 238.0, 38.0 ],
 					"text" : "deque의 크기 (현재 재생중인 oscillator의 개수)"
 				}
 
@@ -182,7 +253,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 747.230778634548187, 161.0, 153.0, 61.0 ],
+					"patching_rect" : [ 758.115396201610565, 76.588235378265381, 153.0, 61.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 601.0, 167.0, 153.0, 61.0 ],
@@ -192,30 +263,32 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-33",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.461531400680542, 602.988691389560699, 150.0, 48.0 ],
+					"patching_rect" : [ 715.34614896774292, 64.807690799236298, 150.0, 65.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 287.0, 481.411764621734619, 185.0, 48.0 ],
+					"presentation_rect" : [ 287.0, 481.411764621734619, 185.0, 52.0 ],
 					"text" : "+ 현재 입력된 주파수를 가지는 새로운 oscillator를 추가함. (deque에 push.)"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"hidden" : 1,
 					"id" : "obj-32",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 80.69230043888092, 695.653848111629486, 150.0, 21.0 ],
+					"patching_rect" : [ 720.576918005943298, 157.472847521305084, 150.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 253.0, 536.411764621734619, 150.0, 21.0 ],
+					"presentation_rect" : [ 253.0, 536.411764621734619, 150.0, 25.0 ],
 					"text" : ". 소수점 입력"
 				}
 
@@ -228,7 +301,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 77.461531400680542, 596.57692676782608, 243.0, 75.0 ],
+					"patching_rect" : [ 717.34614896774292, 58.395926177501678, 243.0, 75.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 451.0, 86.5, 300.0, 53.0 ],
@@ -388,7 +461,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 131.5, 78.0, 598.0, 70.0 ],
 					"text" : "muscalc",
-					"textcolor" : [ 0.890196078431372, 0.890196078431372, 0.890196078431372, 1.0 ]
+					"textcolor" : [ 0.873261630535126, 0.873261690139771, 0.873261690139771, 1.0 ]
 				}
 
 			}
@@ -400,7 +473,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 441.25, 548.0, 50.0, 22.0 ],
+					"patching_rect" : [ 390.25, 585.0, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 263.5, 257.0, 50.0, 22.0 ]
 				}
@@ -433,11 +506,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 606.0, 287.0, 150.0, 20.0 ],
-					"text" : "*"
+					"patching_rect" : [ 606.0, 287.0, 150.0, 75.0 ],
+					"text" : "* 현재 저장된 숫자만큼 샘플에 곱하여 amplitude를 조절합니다. 사고 방지를 위하여 1이 초과하는 숫자는 1로 조절됩니다."
 				}
 
 			}
@@ -456,22 +530,24 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 602.0, 385.0, 150.0, 20.0 ],
-					"text" : "-"
+					"patching_rect" : [ 602.0, 385.0, 150.0, 34.0 ],
+					"text" : "- 가장 먼저 생성된 oscillator를 제거합니다."
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 606.0, 457.0, 150.0, 20.0 ],
-					"text" : "+"
+					"patching_rect" : [ 606.0, 457.0, 150.0, 48.0 ],
+					"text" : "+ 현재 기억된 숫자의 frequency를 가지는 oscillator를 생성합니다."
 				}
 
 			}
@@ -743,7 +819,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 742.115396201610565, 128.999997913837433, 100.0, 29.767441860465116 ],
+					"patching_rect" : [ 747.115396201610565, 109.615385770797729, 100.0, 29.767441860465116 ],
 					"pic" : "Macintosh HD:/Users/rpopic2/Desktop/Screenshot 2023-06-22 at 01.54.29.png",
 					"presentation" : 1,
 					"presentation_rect" : [ 131.5, 71.616279069767444, 214.156521739130426, 63.748918099089984 ]
