@@ -40,6 +40,121 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "JetBrains Mono",
+					"id" : "obj-43",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 239.136360824108124, 311.0, 19.727278351783752, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 83.997182309627533, 462.637362003326416, 19.727278351783752, 22.0 ],
+					"text" : "C",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"blinkcolor" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
+					"id" : "obj-35",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"outlinecolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 234.0, 307.0, 30.0, 30.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 78.860821485519409, 458.637362003326416, 30.0, 30.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_longname" : "button[12]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "button[12]",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "button[12]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"hidden" : 1,
+					"id" : "obj-57",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 687.92307323217392, -4.769235968589783, 150.0, 52.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ -12.639178514480591, 428.637362003326416, 150.0, 52.0 ],
+					"text" : "chain. 다음에 추가될 oscillator와 곱해지게 하며 소리가 나지 않음."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-84",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 323.360821485519409, 427.813833236694336, 150.0, 34.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 323.360821485519409, 428.637362003326416, 204.0, 21.0 ],
+					"text" : ">> 20 + -> 20짜리 chain 추가."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"hidden" : 1,
+					"id" : "obj-83",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 261.860821485519409, 345.402068614959717, 156.0, 25.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 259.860821485519409, 340.902068614959717, 236.0, 25.0 ],
+					"text" : "현재 waveform."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-78",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 158.20588231086731, 745.0, 150.0, 34.0 ],
+					"text" : "원한다면 envelope를 만들 수도 있습니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 397.0, 30.0, 150.0, 34.0 ],
+					"text" : "kslider로도 freq 입력이 가능합니다."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-95",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -395,7 +510,7 @@
 					"patching_rect" : [ 291.0, 204.0, 156.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 238.360821485519409, 313.902068614959717, 236.0, 25.0 ],
-					"text" : "다음에 추가할 oscillator가 chain될 것인지."
+					"text" : "현재 oscillator가 chain(lfo)인지."
 				}
 
 			}
@@ -567,22 +682,6 @@
 			}
 , 			{
 				"box" : 				{
-					"hidden" : 1,
-					"id" : "obj-1",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 758.115396201610565, 76.588235378265381, 150.0, 47.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 419.360821485519409, 345.111581802368164, 175.0, 34.0 ],
-					"text" : "1 *~ -> cycle~ 1과 곱하는 효과와 같음. ring modulation."
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "JetBrains Mono",
 					"id" : "obj-69",
 					"maxclass" : "comment",
@@ -627,7 +726,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 276.0, 705.0, 29.5, 22.0 ],
+					"patching_rect" : [ 114.333333333333343, 766.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -660,12 +759,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
-					"linecount" : 7,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 436.0, 495.0, 175.0, 101.0 ],
-					"text" : "muscalc.play~ 는 계산기의 oscillator입니다. 들어온 number를 일단 기억하다가, 다음 세 개의 명령에 따라 작업을 수행합니다. (오른쪽에서 설명)\n오른쪽 outlet에는 현재 oscillator의 개수를 내보냅니다."
+					"patching_rect" : [ 436.0, 495.0, 175.0, 75.0 ],
+					"text" : "muscalc.play~ 는 계산기의 oscillator입니다. 들어온 number를 일단 기억하다가, 다음 명령에 따라 작업을 수행합니다. (오른쪽에서 설명)."
 				}
 
 			}
@@ -731,7 +830,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 697.115396201610565, 120.0, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 419.360821485519409, 484.288053035736084, 204.0, 21.0 ],
+					"presentation_rect" : [ 419.360821485519409, 601.813833236694336, 204.0, 21.0 ],
 					"text" : "440 + -> 440hz의 oscillator를 추가."
 				}
 
@@ -762,25 +861,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 759.615396201610565, 84.588235378265381, 150.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 419.360821485519409, 382.288053035736084, 173.0, 21.0 ],
+					"presentation_rect" : [ 419.360821485519409, 504.813833236694336, 173.0, 21.0 ],
 					"text" : "0.2 * -> amplitude를 0.2로 설정."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"hidden" : 1,
-					"id" : "obj-57",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 687.92307323217392, -4.769235968589783, 150.0, 38.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 158.860821485519409, 428.637362003326416, 150.0, 38.0 ],
-					"text" : "chain. 다음에 추가될 oscillator와 곱해지게 함."
 				}
 
 			}
@@ -861,7 +943,7 @@
 					"patching_rect" : [ 733.653858959674835, 109.615387856960297, 156.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 267.360821485519409, 362.402068614959717, 238.0, 38.0 ],
+					"presentation_rect" : [ 259.860821485519409, 362.402068614959717, 238.0, 38.0 ],
 					"text" : "현재 재생중인 oscillator의 개수 (deque의 크기)"
 				}
 
@@ -979,21 +1061,6 @@
 , 			{
 				"box" : 				{
 					"fontname" : "JetBrains Mono",
-					"id" : "obj-43",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 239.136360824108124, 311.0, 19.727278351783752, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 83.997182309627533, 462.637362003326416, 19.727278351783752, 22.0 ],
-					"text" : "C",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "JetBrains Mono",
 					"id" : "obj-42",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1092,34 +1159,6 @@
 			}
 , 			{
 				"box" : 				{
-					"blinkcolor" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
-					"id" : "obj-35",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"outlinecolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 234.0, 307.0, 30.0, 30.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 78.860821485519409, 458.637362003326416, 30.0, 30.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_enum" : [ "off", "on" ],
-							"parameter_longname" : "button[12]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "button[12]",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"varname" : "button[12]"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "JetBrains Mono",
 					"fontsize" : 48.0,
 					"id" : "obj-17",
@@ -1142,7 +1181,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 390.25, 585.0, 50.0, 22.0 ],
+					"patching_rect" : [ 371.25, 589.0, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 208.860821485519409, 370.402068614959717, 50.0, 22.0 ]
 				}

@@ -1,6 +1,4 @@
-#include <algorithm>
 #include "c74_min.h"
-#include "c74_min_message.h"
 
 using namespace c74::min;
 
